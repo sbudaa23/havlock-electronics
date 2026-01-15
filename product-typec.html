@@ -5,6 +5,49 @@
   <title>Type-C Cable | Havlock Electronics</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .product-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .product-gallery .main-img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .product-gallery .thumbs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product-gallery .thumbs img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.2s ease;
+    }
+
+    .product-gallery .thumbs img:hover {
+      border: 2px solid #25d366;
+    }
+
+    select {
+      margin: 5px 10px 10px 0;
+      padding: 5px;
+    }
+  </style>
 </head>
 <body>
 
@@ -14,11 +57,12 @@
   <h2>Type-C Cable</h2>
 
   <div class="product-gallery">
-    <img src="images/typec.jpg" alt="Type-C Cable main" class="main-img">
+    <img src="images/typec.jpg" alt="Type-C Cable main" class="main-img" id="main-image">
+
     <div class="thumbs">
-      <img src="images/typec.jpg" alt="Type-C Cable">
-      <img src="images/typec2.jpg" alt="Type-C Cable">
-      <img src="images/typec3.jpg" alt="Type-C Cable">
+      <img src="images/typec.jpg" alt="Type-C Cable" onclick="changeImage(this)">
+      <img src="images/typec2.jpg" alt="Type-C Cable" onclick="changeImage(this)">
+      <img src="images/typec3.jpg" alt="Type-C Cable" onclick="changeImage(this)">
     </div>
   </div>
 
@@ -40,6 +84,13 @@
   <br><br>
   <a href="https://wa.me/27640076009?text=I%20want%20to%20buy%20Type-C%20Cable" class="btn-primary">Buy on WhatsApp</a>
 </section>
+
+<script>
+function changeImage(el) {
+  const main = document.getElementById('main-image');
+  main.src = el.src;
+}
+</script>
 
 </body>
 </html>
