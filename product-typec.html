@@ -6,131 +6,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .section {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .product-gallery {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .product-gallery .main-img {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-
-    .product-gallery .thumbs {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .product-gallery .thumbs img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 5px;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: border 0.2s ease;
-    }
-
-    .product-gallery .thumbs img:hover {
-      border: 2px solid #25d366;
-    }
-
-    select {
-      margin: 5px 10px 10px 0;
-      padding: 5px;
-    }
-
-    .price {
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin: 10px 0;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #25d366;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-      transition: background 0.3s ease;
-    }
-
-    .btn-primary:hover {
-      background-color: #128c3e;
-    }
-
-    .back-btn {
-      display: inline-block;
-      margin: 20px;
-      text-decoration: none;
-      color: #25d366;
-      font-weight: bold;
-    }
+    body{margin:0;font-family:Arial,sans-serif;}
+    .section{padding:20px;text-align:center;}
+    .product-gallery{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:20px;}
+    .product-gallery .main-img{width:300px;height:300px;object-fit:cover;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.2);}
+    .product-gallery .thumbs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px;}
+    .product-gallery .thumbs img{width:60px;height:60px;object-fit:cover;border-radius:5px;cursor:pointer;border:2px solid transparent;transition:border 0.2s ease;}
+    .product-gallery .thumbs img:hover{border:2px solid #25d366;}
+    select{margin:5px 10px 10px 0;padding:5px;}
+    .price{font-weight:bold;font-size:1.2rem;margin:10px 0;}
+    .btn-primary{display:inline-block;padding:10px 20px;background-color:#25d366;color:#fff;text-decoration:none;border-radius:5px;margin-top:10px;transition:background 0.3s ease;}
+    .btn-primary:hover{background-color:#128c3e;}
+    .back-btn{display:inline-block;margin:20px;text-decoration:none;color:#25d366;font-weight:bold;}
   </style>
 </head>
 <body>
 
-  <a href="index.html" class="back-btn">← Back to Store</a>
+<a href="index.html" class="back-btn">← Back to Store</a>
 
-  <section class="section">
-    <h2>Type-C Cable</h2>
+<section class="section">
+  <h2>Type-C Cable</h2>
 
-    <div class="product-gallery">
-      <img src="images/typec.jpg" alt="Type-C Cable main" class="main-img" id="main-image">
-
-      <div class="thumbs">
-        <img src="images/typec.jpg" alt="Type-C Cable" onclick="changeImage(this)">
-        <img src="images/typec2.jpg" alt="Type-C Cable" onclick="changeImage(this)">
-        <img src="images/typec3.jpg" alt="Type-C Cable" onclick="changeImage(this)">
-      </div>
+  <div class="product-gallery">
+    <img src="images/typec.jpg" alt="Type-C Cable main" class="main-img" id="main-image">
+    <div class="thumbs">
+      <img src="images/typec.jpg" alt="Type-C Cable" onclick="changeImage(this)">
+      <img src="images/typec2.jpg" alt="Type-C Cable" onclick="changeImage(this)">
+      <img src="images/typec3.jpg" alt="Type-C Cable" onclick="changeImage(this)">
     </div>
+  </div>
 
-    <p>High quality Type-C cable compatible with fast charging devices.</p>
-    <p class="price">R80</p>
+  <p>High quality Type-C cable compatible with fast charging devices.</p>
+  <p class="price">R80</p>
 
-    <label for="color">Color:</label>
-    <select id="color">
-      <option value="black">Black</option>
-      <option value="white">White</option>
-    </select>
+  <label for="color">Color:</label>
+  <select id="color">
+    <option value="Black">Black</option>
+    <option value="White">White</option>
+  </select>
 
-    <label for="length">Length:</label>
-    <select id="length">
-      <option value="1m">1m</option>
-      <option value="2m">2m</option>
-    </select>
+  <label for="length">Length:</label>
+  <select id="length">
+    <option value="1m">1m</option>
+    <option value="2m">2m</option>
+  </select>
 
-    <br><br>
-    <a href="https://wa.me/27640076009?text=I%20want%20to%20buy%20Type-C%20Cable" class="btn-primary">Buy on WhatsApp</a>
-  </section>
+  <br><br>
+  <a href="#" id="whatsapp-btn" class="btn-primary">Buy on WhatsApp</a>
+</section>
 
-  <script>
-    function changeImage(el) {
-      const main = document.getElementById('main-image');
-      main.src = el.src;
-    }
-  </script>
+<script>
+function changeImage(el){
+  document.getElementById('main-image').src = el.src;
+}
+
+// WhatsApp button dynamic message
+const whatsappBtn = document.getElementById('whatsapp-btn');
+
+whatsappBtn.addEventListener('click', function(e){
+  e.preventDefault(); // prevent default link
+
+  const color = document.getElementById('color').value;
+  const length = document.getElementById('length').value;
+  const product = "Type-C Cable";
+
+  const message = `I want to buy ${product} - Color: ${color}, Length: ${length}`;
+  const url = `https://wa.me/27640076009?text=${encodeURIComponent(message)}`;
+
+  // Open WhatsApp
+  window.open(url, '_blank');
+});
+</script>
 
 </body>
 </html>
