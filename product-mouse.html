@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>USB / Wireless Mouse | Havlock Electronics</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>USB / Wireless Mouse | Havlock Electronics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a href="index.html" class="back-btn">← Back to Store</a>
 
 <section class="section">
-  <h2>USB / Wireless Mouse</h2>
-  <div class="product-gallery">
-    <img src="images/mouse.jpg" id="main-image" class="main-img">
-    <div class="thumbs">
-      <img src="images/mouse.jpg" onclick="changeImage(this)">
-      <img src="images/mouse2.jpg" onclick="changeImage(this)">
-      <img src="images/mouse3.jpg" onclick="changeImage(this)">
-    </div>
+<h2>USB / Wireless Mouse</h2>
+<div class="product-gallery">
+  <img src="images/mouse.jpg" id="main-image" class="main-img">
+  <div class="thumbs">
+    <img src="images/mouse.jpg" onclick="changeImage(this)">
+    <img src="images/mouse2.jpg" onclick="changeImage(this)">
+    <img src="images/mouse3.jpg" onclick="changeImage(this)">
   </div>
+</div>
 
-  <p>High precision USB & Wireless mouse, ergonomic design.</p>
-  <p class="price">R180</p>
+<p>High precision USB & Wireless mouse, ergonomic design.</p>
+<p class="price">R180</p>
 
-  <label for="color">Color:</label>
-  <select id="color">
-    <option value="black">Black</option>
-    <option value="white">White</option>
-  </select>
+<label for="color">Color:</label>
+<select id="color">
+  <option value="Black">Black</option>
+  <option value="White">White</option>
+</select>
 
-  <br><br>
-  <a href="https://wa.me/27640076009?text=I%20want%20to%20buy%20USB%20Wireless%20Mouse" class="btn-primary">Buy on WhatsApp</a>
+<br><br>
+<a href="#" id="whatsapp-btn" class="btn-primary">Buy on WhatsApp</a>
 </section>
 
 <script>
-function changeImage(el){document.getElementById('main-image').src = el.src;}
+function changeImage(el){document.getElementById('main-image').src=el.src;}
+document.getElementById('whatsapp-btn').addEventListener('click',function(e){
+  e.preventDefault();
+  const product="USB / Wireless Mouse";
+  const color=document.getElementById('color').value;
+  const message=`I want to buy ${product} - Color: ${color}`;
+  const url=`https://wa.me/27640076009?text=${encodeURIComponent(message)}`;
+  window.open(url,'_blank');
+});
 </script>
 </body>
 </html>
