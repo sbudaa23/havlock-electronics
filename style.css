@@ -1,8 +1,16 @@
+:root {
+  --bg-color: #121212;       /* background color of your site */
+  --text-color: #ffffff;     /* text color */
+  --card-bg: #1e1e1e;        /* card background */
+  --btn-bg: #25d366;         /* button background */
+  --btn-text: #ffffff;       /* button text */
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0b0f1a;
-  color: white;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 .hero {
@@ -44,7 +52,7 @@ body {
 }
 
 .card {
-  background: #111;
+  background: var(--card-bg);
   border-radius: 20px;
   padding: 20px;
   text-align: center;
@@ -174,8 +182,8 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #00e0ff, #0077ff);
-  color: black;
+  background: var(--btn-bg);
+  color: var(--btn-text);
   padding: 14px 26px;
   border-radius: 40px;
   font-weight: bold;
@@ -249,5 +257,6 @@ body {
     font-size: 0.9rem;
   }
 }
+
 
 
