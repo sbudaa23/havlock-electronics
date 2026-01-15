@@ -166,6 +166,13 @@ body {
   flex-wrap: wrap;
 }
 
+.trust-text {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
 .btn-primary {
   background: linear-gradient(135deg, #00e0ff, #0077ff);
   color: black;
@@ -223,3 +230,4 @@ body {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+
