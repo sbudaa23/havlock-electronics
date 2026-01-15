@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lightning Cable | Havlock Electronics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style> /* Same styling as previous */ </style>
+</head>
+<body>
+
+<a href="index.html" class="back-btn">← Back to Store</a>
+
+<section class="section">
+  <h2>Lightning Cable</h2>
+
+  <div class="product-gallery">
+    <img src="images/lightning.jpg" alt="Lightning Cable main" class="main-img" id="main-image">
+    <div class="thumbs">
+      <img src="images/lightning.jpg" onclick="changeImage(this)">
+      <img src="images/lightning2.jpg" onclick="changeImage(this)">
+      <img src="images/lightning3.jpg" onclick="changeImage(this)">
+    </div>
+  </div>
+
+  <p>High-speed Lightning cable for iPhones and iPads.</p>
+  <p class="price">R100</p>
+
+  <label for="color">Color:</label>
+  <select id="color">
+    <option value="white">White</option>
+    <option value="black">Black</option>
+  </select>
+
+  <label for="length">Length:</label>
+  <select id="length">
+    <option value="1m">1m</option>
+    <option value="2m">2m</option>
+  </select>
+
+  <br><br>
+  <a href="https://wa.me/27640076009?text=I%20want%20to%20buy%20Lightning%20Cable" class="btn-primary">Buy on WhatsApp</a>
+</section>
+
+<script>
+function changeImage(el){document.getElementById('main-image').src = el.src;}
+</script>
+</body>
+</html>
