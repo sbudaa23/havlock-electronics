@@ -457,6 +457,20 @@ html {
   font-size: 16px;
 }
 
+.social-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+
+
 
 
 
