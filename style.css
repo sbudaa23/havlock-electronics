@@ -384,4 +384,37 @@ body::before {
   transform: translateY(0);
 }
 
+.testimonials-section {
+  padding: 60px 20px;
+  background: #f8f9fa;
+}
+
+.testimonials-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #444;
+}
+
+.testimonial-card h4 {
+  margin-top: 15px;
+  color: #111;
+  font-size: 0.95rem;
+}
+
+
 
