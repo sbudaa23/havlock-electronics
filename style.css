@@ -230,11 +230,15 @@ body {
   right: 20px;
   background: #25d366;
   color: white;
-  font-size: 26px;
-  padding: 14px 18px;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   text-decoration: none;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
   z-index: 1000;
 }
 
@@ -436,23 +440,8 @@ body::before {
   display: flex;
 }
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  font-size: 28px;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  text-decoration: none;
-  z-index: 1000;
-}
+
+
 
 
 
