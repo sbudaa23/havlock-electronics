@@ -11,20 +11,6 @@
     💬
   </a>
   
-<script>
-const faders = document.querySelectorAll('.fade-up');
-
-const appear = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-});
-
-faders.forEach(el => appear.observe(el));
-</script>
-  
 <body>
 
   <!-- HERO -->
@@ -61,7 +47,7 @@ faders.forEach(el => appear.observe(el));
         <img src="images/typeb.jpg" alt="Type-B Cable">
         <h3>Type-B Cable</h3>
         <p class="price">R70</p>
-        <button class="btn-sm" oneclick="addToCart('Type-B Cable', 80)">
+        <button class="btn-sm" onclick="addToCart('Type-B Cable', 80)">
           Add to Cart
         </button>
       </div>
@@ -70,7 +56,7 @@ faders.forEach(el => appear.observe(el));
         <img src="images/typec.jpg" alt="Type-C Cable">
         <h3>Type-C Cable</h3>
         <p class="price">R80</p>
-        <button class="btn-sm" oneclick="addToCart('Type-C Cable', 80)">
+        <button class="btn-sm" onclick="addToCart('Type-C Cable', 80)">
           Add to Cart
         </button>
       </div>
@@ -79,7 +65,7 @@ faders.forEach(el => appear.observe(el));
         <img src="images/lightning.jpg" alt="Lightning Cable">
         <h3>Lightning Cable</h3>
         <p class="price">R100</p>
-        <button class="btn-sm" oneclick="addToCart('Lightning Cable', 80)">
+        <button class="btn-sm" onclick="addToCart('Lightning Cable', 80)">
           Add to Cart
         </button>
       </div>
@@ -88,7 +74,7 @@ faders.forEach(el => appear.observe(el));
         <img src="images/sata-usb.jpg" alt=" SATA to USB Cable">
         <h3>SATA to USB Cable</h3>
         <p class="price">R150</p>
-        <button class="btn-sm" oneclick="addToCart('SATA to USB Cable', 80)">
+        <button class="btn-sm" onclick="addToCart('SATA to USB Cable', 80)">
           Add to Cart
         </button>
       </div>
@@ -97,7 +83,7 @@ faders.forEach(el => appear.observe(el));
         <img src="images/charger.jpg" alt="Phone Charger">
         <h3>Phone Charger</h3>
         <p class="price">R120</p>
-        <button class="btn-sm" oneclick="addToCart('Phone Charger', 80)">
+        <button class="btn-sm" onclick="addToCart('Phone Charger', 80)">
           Add to Cart
         </button>
       </div>
@@ -106,7 +92,7 @@ faders.forEach(el => appear.observe(el));
         <img src="images/mouse.jpg" alt="USb / Wireless Mouse">
         <h3>USB / Wireless Mouse</h3>
         <p class="price">R180</p>
-        <button class="btn-sm" oneclick="addToCart('USB / Wireless Mouse', 80)">
+        <button class="btn-sm" onclick="addToCart('USB / Wireless Mouse', 80)">
           Add to Cart
         </button>
       </div>
@@ -115,7 +101,7 @@ faders.forEach(el => appear.observe(el));
         <img src="images/screen-protector.jpg" alt="Screen Protector">
         <h3>Screen Protector</h3>
         <p class="price">R50</p>
-        <button class="btn-sm" oneclick="addToCart('Screen Protector', 80)">
+        <button class="btn-sm" onclick="addToCart('Screen Protector', 80)">
           Add to Cart
         </button>
       </div>
@@ -218,18 +204,18 @@ faders.forEach(el => appear.observe(el));
   <!-- Contact Section -->
   <section id="contact" class="section contact-section">
     <h2>Contact Us</h2>
-    <div class="contact-container"
-
+    <div class="contact-container">
       
+      <!-- Google Map -->
       <div class="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.230511560365!2d27.988!3d-26.123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9521f1f7b50a3b%3A0xabcdef!2sHavlock%20Electronics!5e0!3m2!1sen!2sza!4v1697389618888!5m2!1sen!2sza"
           width="100%"
-          heigt="100%"
-          style="border:0:"
+          height="100%"
+          style="border:0;"
           allowfullscreen=""
           loading="lazy"
-          referrepolicy="no-referrer-when-downgrade">
+          referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
 
@@ -294,7 +280,19 @@ faders.forEach(el => appear.observe(el));
     <p>© 2026 Havlock Electronics. Built by Mr. Robot.| All rights reserved.</p>
     
   </footer>
+<script>
+const faders = document.querySelectorAll('.fade-up');
 
+const appear = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+faders.forEach(el => appear.observe(el));
+</script>
 </body>
   
 <script>
@@ -317,6 +315,7 @@ function toggleCart() {
 
 
 </html>
+
 
 
 
