@@ -136,7 +136,7 @@ body {
   padding: 25px 20px;
   font-size: 0.9rem;
   color: #555;
-  background: #ffffff;
+  background: #020617;
   border-top: 1px solid #e6e6e6;
 }
 
@@ -494,6 +494,7 @@ html {
 .social-icon:hover {
   transform: scale(1.2);
 }
+
 
 
 
