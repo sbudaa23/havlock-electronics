@@ -10,6 +10,21 @@
   <a href="https://wa.me/27657322962" class="whatsapp-float" target="_blank">
     💬
   </a>
+  
+<script>
+const faders = document.querySelectorAll('.fade-up');
+
+const appear = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+faders.forEach(el => appear.observe(el));
+</script>
+  
 <body>
 
   <!-- HERO -->
@@ -168,6 +183,30 @@
     
     </div>
   </section>
+
+  <!-- Gallery -->
+  <section class="testimonials-section">
+    <h2 class="section-title">What Clients <span>Say</span></h2>
+    
+    <div class="testimonials-grid">
+      
+      <div class="testimonial-card">
+        <p>“My phone was dead. Havlock fixed it same day. Respect.”</p>
+        <h4>— Thabo M.</h4>
+      </div>
+
+      <div class="testimonial-card">
+        <p>“Unlocked my phone when everyone else failed.”</p>
+        <h4>— Lerato K.</h4>
+      </div>
+
+      <div class="testimonial-card">
+        <p>“Professional service, fair prices, honest work.”</p>
+        <h4>— Sipho D.</h4>
+      </div>
+
+    </div>
+  </section>
   
   <!-- CONTACT -->
   <footer class="footer">
@@ -184,6 +223,7 @@
 </body>
 
 </html>
+
 
 
 
