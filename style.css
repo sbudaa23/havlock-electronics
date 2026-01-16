@@ -509,15 +509,33 @@ html {
 
 .contact-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  flex-wrap: nowrap; /* Prevent stacking on desktop */
   justify-content: center;
+  gap: 30px;
+  max-width: 1100px; /* Limit width for clean layout */
+  margin: 0 auto;
 }
 
-.map, .contact-form {
-  flex: 1 1 400px;
-  min-width: 300px;
+.map {
+  flex: 1;
+  min-width: 400px;
+  max-width: 500px;
   height: 400px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 350px;
+  max-width: 450px;
   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
   border-radius: 8px;
   overflow: hidden;
@@ -542,7 +560,7 @@ html {
 
 .contact-form button {
   padding: 12px;
-  background: #25d366; /* WhatsApp green */
+  background: #25d366;
   color: white;
   border: none;
   border-radius: 5px;
@@ -554,6 +572,19 @@ html {
 .contact-form button:hover {
   background: #1ebe57;
 }
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .map, .contact-form {
+    max-width: 100%;
+    height: 300px;
+  }
+}
+
 
 
 
