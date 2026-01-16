@@ -84,8 +84,6 @@ body {
   box-shadow: 0 20px 40px rgba(0,224,255,0.15);
 }
 
-
-
 .btn-sm {
   display: inline-block;
   margin-top: 10px;
@@ -134,9 +132,37 @@ body {
 }
 
 .footer {
-  background: #020617;
   text-align: center;
-  padding: 30px;
+  padding: 25px 20px;
+  font-size: 0.9rem;
+  color: #555;
+  background: #ffffff;
+  border-top: 1px solid #e6e6e6;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
 }
 
 .hero {
@@ -468,6 +494,7 @@ html {
 .social-icon:hover {
   transform: scale(1.2);
 }
+
 
 
 
