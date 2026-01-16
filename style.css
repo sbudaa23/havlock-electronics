@@ -440,6 +440,10 @@ body::before {
   display: flex;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 
 
