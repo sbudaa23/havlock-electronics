@@ -6,15 +6,36 @@
   <title>CalTech | Repairs & Accessories</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "CalTech Repairs",
+    "image": "https://yourdomain.co.za/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Your Street",
+      "addressLocality": "Your City",
+      "addressCountry": "ZA"
+    },
+    "telephone": "+27XXXXXXXXX",
+    "url": "https://yourdomain.co.za"
+  }
+  </script>
 </head>
 
 <body>
+  <div class="cart-icon" onclick="checkoutWhatsApp()">
+    🛒 <span id="cartCount">0</span>
+  </div>
+  <img src="images/repair1.jpg" loading="lazy" alt="Repair">
 
   <!-- TOP HEADER -->
   <header class="top-header">
     <div class="top-bar">
       FREE COLLECTION & DELIVERY WITHIN 35KM
     </div>
+    <button id="themeToggle">🌙</button>
 
     <div class="main-header">
       <div class="search-box">
@@ -112,6 +133,41 @@
       alert('Cart → WhatsApp checkout coming next');
     }
   </script>
+  <script>
+  document.getElementById("themeToggle").onclick = () => {
+    document.body.classList.toggle("dark");
+  };
+  </script>
+
+  <script>
+  let cart = [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    document.getElementById("cartCount").innerText = cart.length;
+  }
+
+  function checkoutWhatsApp() {
+    let msg = "🛒 *Order Summary*%0A%0A";
+    let total = 0;
+
+    cart.forEach(item => {
+      msg += `• ${item.name} - R${item.price}%0A`;
+      total += item.price;
+    });
+
+    msg += `%0A*Total: R${total}*`;
+
+    window.open(
+    `  https://wa.me/27XXXXXXXXX?text=${msg}`,
+      "_blank"
+    );
+  }
+  </script>
+
+  
+
 
 </body>
 </html>
+
