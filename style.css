@@ -1,14 +1,7 @@
-/* =====================
-   ROOT VARIABLES
-===================== */
 :root {
-  --primary: #00e0ff;
-  --whatsapp: #25d366;
-  --dark: #020617;
-  --light: #ffffff;
-  --text-dark: #111;
-  --text-light: #ffffff;
-  --muted: #777;
+  --bg: #ffffff;
+  --text: #111;
+  --card: #ffffff;
 }
 
 /* =====================
@@ -22,11 +15,16 @@ html {
   scroll-behavior: smooth;
 }
 
+body.dark {
+  --bg: #0b0f19;
+  --text: #ffffff;
+  --card: #111827;
+}
+
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--text-dark);
-  background: #f9f9f9;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
 }
 
 /* =====================
@@ -339,3 +337,4 @@ body {
     font-size: 2.4rem;
   }
 }
+
