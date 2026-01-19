@@ -585,6 +585,73 @@ html {
   }
 }
 
+.top-bar {
+  background: #2b2b6f;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  padding: 6px;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.search-box input {
+  padding: 8px;
+  width: 200px;
+}
+
+.logo h2 {
+  color: #2b2b6f;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 25px;
+  padding: 12px 30px;
+  background: #f7f7f7;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  top: 30px;
+  min-width: 200px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
 
 
 
